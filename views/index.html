@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="toggle">
+            <button> add new drug</button>
+        </div>
+        <div id="addNew" style="display:none">
+            Fill in the ,to add data
+            <form action="/addNew">
+                <input type="text" placeholder="Enter name" name="name">
+                <input type="number" name="id" id="hiddenID">
+                <button id="generate">generate Id</button>
+                <input type="submit" value="add to database">
+            </form>
+        </div>
+        <div class="stat">
+
+        </div>
+
+        <div class="search">
+            <form action="/search">
+                <input type="text" placeholder="enter search term">
+                <input type="submit" value="search">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+   
+
+var generateRandomId = function () {
+    var id = '';
+    for (var i = 1; i <= 14; i++) {
+        var randPos = Math.floor(Math.random() * charSetSize);
+        id += charSet[randPos];
+    }
+    uniqueID.textContent = id;
+    generateButton.textContent = id;
+};
+var toggleButton = document.getElementById('toggle');
+
+
+toggglebutton.onclick = function () {
+    var div = document.getElementById('addNew');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+};
+
+var generateButton = document.getElementById('generate');
+var uniqueID = document.getElementById('hiddenID');
+generateButton.onclick = generateRandomId();
+
+
+</script>
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "drug_checker",
+  "version": "1.0.0",
+  "description": "An Sms drug checking app for , verifying drug certification and licensing ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Razak Wasiu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "parse": "^1.8.3",
+    "twilio": "^2.9.1"
+  }
+}
